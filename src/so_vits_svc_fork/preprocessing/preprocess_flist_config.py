@@ -8,7 +8,11 @@ from pathlib import Path
 
 import numpy as np
 from librosa import get_duration
-from tqdm import tqdm
+try:
+    from tqdm.notebook import tqdm  # Colab/Jupyter
+except ImportError:
+    from tqdm import tqdm           # 普通终端
+
 
 LOG = getLogger(__name__)
 CONFIG_TEMPLATE_DIR = Path(__file__).parent / "config_templates"

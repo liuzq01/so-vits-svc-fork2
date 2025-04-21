@@ -1,6 +1,11 @@
 # Changelog
 
 <!--next-version-placeholder-->
+## v4.2.27 (2025-04-21)
+
+### Fix
+
+* **deps:** Update for colab using.
 
 ## v4.2.26 (2024-07-29)
 
