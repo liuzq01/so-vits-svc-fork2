@@ -400,8 +400,11 @@ def plot_spectrogram_to_numpy(spectrogram: ndarray) -> ndarray:
     plt.tight_layout()
 
     fig.canvas.draw()
-    data = np.asarray(fig.canvas.buffer_rgba())
-    data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    # data = np.fromstring(fig.canvas.tostring_rgb(), dtype=np.uint8, sep="")
+    #data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    data = np.asarray(fig.canvas.buffer_rgba(), dtype=np.uint8)
+    height, width = fig.canvas.get_width_height()
+    data = data.reshape((height, width, 4))[:, :, :3]  # 保留 RGB 通道（丢弃 Alpha）
     plt.close()
     return data
 
@@ -451,8 +454,11 @@ def plot_data_to_numpy(x: ndarray, y: ndarray) -> ndarray:
     plt.tight_layout()
 
     fig.canvas.draw()
-    data = np.asarray(fig.canvas.buffer_rgba())
-    data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    # data = np.fromstring(fig.canvas.tostring_rgb(), dtype=np.uint8, sep="")
+    #data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    data = np.asarray(fig.canvas.buffer_rgba(), dtype=np.uint8)
+    height, width = fig.canvas.get_width_height()
+    data = data.reshape((height, width, 4))[:, :, :3]  # 保留 RGB 通道（丢弃 Alpha）
     plt.close()
     return data
 

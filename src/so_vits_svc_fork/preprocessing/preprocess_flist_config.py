@@ -8,10 +8,7 @@ from pathlib import Path
 
 import numpy as np
 from librosa import get_duration
-try:
-    from tqdm.notebook import tqdm  # Colab/Jupyter
-except ImportError:
-    from tqdm import tqdm           # 普通终端
+from tqdm import tqdm
 
 
 LOG = getLogger(__name__)
