@@ -146,7 +146,8 @@ Install this via pip (or your favourite package manager that uses pip):
 ```shell
 python -m pip install -U pip setuptools wheel
 pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu121 # https://download.pytorch.org/whl/nightly/cu121
-pip install -U so-vits-svc-fork
+#pip install -U so-vits-svc-fork
+pip install -U git+https://github.com/liuzq01/so-vits-svc-fork2.git
 ```
 
 <details>
@@ -161,8 +162,8 @@ pip install -U so-vits-svc-fork
 Please update this package regularly to get the latest features and bug fixes.
 
 ```shell
-pip install -U so-vits-svc-fork
-# pipx upgrade so-vits-svc-fork
+#pip install -U so-vits-svc-fork
+pip install -U git+https://github.com/liuzq01/so-vits-svc-fork2.git
 ```
 
 ## Usage
@@ -217,7 +218,7 @@ Pretrained models are available on [Hugging Face](https://huggingface.co/models?
 
 #### Cloud
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/liuzq01/so-vits-svc-fork2/blob/main/notebooks/so-vits-svc-fork-4.2.7.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/liuzq01/so-vits-svc-fork2/blob/main/notebooks/so-vits-svc-fork-4.2.7.ipynb)
 [![Open In Paperspace](https://img.shields.io/badge/Open%20in-Paperspace-blue?style=flat-square&logo=paperspace)](https://console.paperspace.com/github/voicepaw/so-vits-svc-fork-paperspace/blob/main/so-vits-svc-fork-4.0-paperspace.ipynb)
 [![Paperspace Referral](<https://img.shields.io/badge/Referral%20($10)-9VJN74I-blue?style=flat-square&logo=paperspace>)](https://www.paperspace.com/?r=9VJN74I)[^p]
 

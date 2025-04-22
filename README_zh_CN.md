@@ -97,19 +97,21 @@ conda activate so-vits-svc-fork
 ```shell
 python -m pip install -U pip setuptools wheel
 pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install -U so-vits-svc-fork
+#pip install -U so-vits-svc-fork
+pip install -U git+https://github.com/liuzq01/so-vits-svc-fork2.git
 ```
 
-- 如果没有可用 GPU 或使用 MacOS, 不需要执行 `pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu118`. MPS 可能已经安装了.
+- 如果没有可用 GPU 或使用 MacOS, 不需要执行 `pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu121`. MPS 可能已经安装了.
 - 如果在 Linux 下使用 AMD GPU, 请使用此命令 `--index-url https://download.pytorch.org/whl/rocm5.4.2`
-  替换掉 `--index-url https://download.pytorch.org/whl/cu118` . Windows 下不支持 AMD GPUs (#120).
+  替换掉 `--index-url https://download.pytorch.org/whl/cu121` . Windows 下不支持 AMD GPUs (#120).
 
 ### 更新
 
 请经常更新以获取最新功能和修复错误:
 
 ```shell
-pip install -U so-vits-svc-fork
+#pip install -U so-vits-svc-fork
+pip install -U git+https://github.com/liuzq01/so-vits-svc-fork2.git
 ```
 
 ## 使用教程
@@ -164,7 +166,7 @@ svc infer source.wav
 
 #### 云端
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/liuzq01/so-vits-svc-fork2/blob/main/notebooks/so-vits-svc-fork-4.2.7.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/liuzq01/so-vits-svc-fork2/blob/main/notebooks/so-vits-svc-fork-4.2.7.ipynb)
 [![Open In Paperspace](https://img.shields.io/badge/Open%20in-Paperspace-blue?style=flat-square&logo=paperspace)](https://console.paperspace.com/github/34j/so-vits-svc-fork-paperspace/blob/main/so-vits-svc-fork-4.0-paperspace.ipynb)
 [![Paperspace Referral](<https://img.shields.io/badge/Referral%20($10)-9VJN74I-blue?style=flat-square&logo=paperspace>)](https://www.paperspace.com/?r=9VJN74I)[^p]
 
